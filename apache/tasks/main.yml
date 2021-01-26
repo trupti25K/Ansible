@@ -1,0 +1,8 @@
+---
+# tasks file for apache
+- name : 'install httpd on redhat'
+  import_tasks: redhat.yml
+  when: ansible_os_family == "Redhat"
+- name : 'install httpd on ubuntu'
+  import_tasks: debian.yml
+  when: ansible_os_family == "Debian"

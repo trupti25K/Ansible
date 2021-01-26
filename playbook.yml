@@ -1,0 +1,8 @@
+-
+  name: play1
+  hosts: all
+  become: yes
+  become_method: sudo
+  remote_user: root
+  roles:
+  - apache

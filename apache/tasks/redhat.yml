@@ -1,0 +1,19 @@
+---
+# tasks file for redhat
+- name : 'install httpd on amazon linux'
+  yum:
+    name: httpd
+    state: latest
+- name: 'copy index file'
+  copy:
+    src: index.html
+    dest: /var/www/html/index.html
+    owner: root
+    group: root
+    mode: 0755
+  notify:
+  - Restart httpd 
+- name: 'start service'
+  service:
+    name: httpd
+    state: started
