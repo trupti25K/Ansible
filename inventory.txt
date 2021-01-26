@@ -1,2 +1,0 @@
-redhat ansible_host=172.31.46.248 ansible_connection=ssh ansible_user=ec2-user
-ubuntu ansible_host=172.31.36.229 ansible_connection=ssh ansible_user=ubuntu
